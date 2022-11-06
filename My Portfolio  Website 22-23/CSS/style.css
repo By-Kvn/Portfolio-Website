@@ -1,0 +1,561 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+/* Smooth scrolling sur l'entièreté du site */
+html {
+	scroll-behavior: smooth;
+}
+
+
+body{
+    /* font-family: Arial, Helvetica, sans-serif; */
+    font-family: 'Poppins', sans-serif;
+    
+}
+.main-container{
+    height: 100vh;
+    overflow-y: scroll;
+    scroll-snap-type: y mandatory;
+}
+
+/* PAGE HOME */
+.section-1{
+    /* Tout la taille de l'ecran */
+    height: 100vh;
+    scroll-snap-align: start; 
+}
+
+header{
+    z-index: 9999;
+    position: fixed;
+    /* aligner mes éléments */
+    display: flex;
+    /* espace entre mes éléments*/
+    justify-content: space-between;
+    /* aligner au centre */
+    align-items: center;
+    height: 107px;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.212);
+    /* tester un margin a la place du padding */
+    padding-right: 110px;
+    box-shadow: rgba(0, 0, 0, 0.05) 0px 4px 12px;
+    margin-bottom: 100px;
+    /* EFFET GLASSMORPHISM */
+    background: rgba(255, 255, 255, 0.774);
+    box-shadow: 0 8px 32px 0 rgba(189, 189, 189, 0.114);
+    backdrop-filter: blur( 6px );
+    -webkit-backdrop-filter: blur( 6px );
+}
+
+.kl-logo{
+    height: 98px;
+    width: 209px;
+    cursor: pointer;
+}
+
+/*
+li{
+    height: 107px;
+    width: 366px;
+    margin-top: 26px;
+    margin-bottom: 26px;
+    margin-right: 10px;
+    margin-left: 10px;
+}
+*/
+
+li{
+    /* Aligner mes elements de la nav bar */
+    display: inline-block;
+    margin: 10px;
+    text-decoration: none;
+}
+
+li a{
+    text-decoration: none;
+    color: black;
+    /* font-family: Helvetica Neue,Helvetica,Arial,sans-serif;*/
+    font-family: 'Poppins', sans-serif;
+    font-size: 18px;
+}
+.contact-nav{
+    font-weight: 450;
+    margin-right: 60px;
+}
+
+h1{
+    height: 505px;
+    width: 754px;
+    font-size: 80px;
+    margin-top: 200px;
+    margin-left: 100px; 
+}
+
+h1 span{
+    font-weight: 100;
+    /* font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;*/
+    font-family: 'Poppins', sans-serif;
+}
+
+.btn-contact{
+    font-weight: 450;
+    font-size: 0.3em;
+    height: 46px;
+    width: 137px;
+    border-radius: 2px;
+    margin: 10px 24px 10px 70px;
+    text-decoration: none;
+    color: black;
+    box-shadow: rgb(0, 0, 0) 0px 0px 0px 1.5px;
+    padding: 10px;
+}
+
+.btn-contact:hover{
+    transition: 0.14s ease-out;
+    box-shadow: rgba(0, 0, 0, 0.88) -5px 5px;
+    border-color: black;
+    background-color: #7DDB35;
+}
+.home-main-content{
+    display: flex;
+}
+
+.home-avatar{
+    height: 435px;
+  /*Flip Horizontal de mon avatar */
+    -webkit-transform: scaleX(-1);
+    transform: scaleX(-1);
+    margin-top: 200px;
+    margin-left: 110px;
+}
+
+
+.home-sparkles{
+    height: 44px;
+    cursor: pointer ;
+}
+
+.home-sparkles:hover{
+    transition: 1s;
+    transform: rotate(360deg);
+}
+
+
+
+/* PAGE WORK */
+
+.Work-page{
+    height: 100vh;
+    scroll-snap-align: start;
+}
+#cards-container{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content:center;
+    align-items: center;
+    align-content: center;
+    padding-top: 165px;
+}
+#cards-container img {
+    height: 270px;
+    width: 303px;
+    margin-bottom: 10px;
+    margin-right: 10px;
+    object-fit:cover;
+    cursor: pointer;
+}
+#cards-container img:hover {
+    transform: scale(1.03);
+}
+
+
+/* OVERLAY / IMAGE HOVER EFFECT */
+
+.img-container{
+    position: relative;
+    object-fit: cover;
+}
+
+.img-container img{
+    transition: 0.5s ease;
+    border-radius: 3px;
+}
+
+.overlay-img{
+    transition: 0.5s ease;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+.text-overlay-img{
+    color: rgb(0, 0, 0);
+    opacity: 0;
+}
+
+.img-container:hover img{
+    opacity: 0.1;
+    backdrop-filter: blur(7px);
+}
+
+
+.img-container:hover .text-overlay-img{
+    opacity: 1;
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+
+
+
+
+/* PAGE ABOUT ME */
+#About-me-page{
+    height: 100vh;
+    scroll-snap-align: start;
+    padding-top: 225px;
+}
+
+#About-me-page h2{
+    height: 108px;
+    width: 431px;
+    font-size: 80px;
+    margin-left: 100px;
+}
+.joke{
+    font-weight: 200;
+}
+
+#About-me-page p{
+    height: 25px;
+    width: 651px;
+    margin-left: 100px;
+    margin-top: 20px;
+}
+#about-me-main-p{
+    margin-bottom: 100px;
+    /*     line-height: 1.6; */
+}
+
+.btn-CV{
+    font-weight: 450;
+    font-size: 1em;
+    border-radius: 2px;
+    text-decoration: none;
+    color: black;
+    box-shadow: rgb(0, 0, 0) 0px 0px 0px 1.5px;
+    padding: 10px 15px 10px 15px;
+    margin-left: 140px;
+    margin-top: 400px;
+}
+
+.btn-CV:hover{
+    transition: 0.14s ease-out;
+    box-shadow: rgba(0, 0, 0, 0.88) -5px 5px;
+    border-color: black;
+    background-color: #7DDB35;
+}
+
+.about-me-text{
+    margin-bottom: 190px;
+}
+
+
+.moi-photo{
+    width: 349px;
+    /* Eviter le étirements des images */
+    object-fit: contain;
+    margin-right: 5px;
+    box-shadow: rgba(0, 0, 0, 0.88) 5px 5px;
+}
+.moi-photo:hover{
+    transform: rotate(2deg);
+    transition: 0.5s ease-out;
+    box-shadow: rgba(0, 0, 0, 0.88) 5px 5px, rgba(0, 0, 0, 0.50) 10px 10px;
+}
+.text-bloc-about-me{
+    position: static;
+    /* Les bg color servent a m'orienter par rapport au bloc */
+    /* background-color: blue; */
+    padding-right: 180px;
+}
+
+.About-me-page-content{
+    display: flex;
+    /* Les bg color servent a m'orienter par rapport au bloc */
+    /* background-color: rgb(234, 153, 153); */
+}
+
+
+
+
+/* PAGE CONTACT*/
+
+.Contact-page{
+    height: 100vh;
+    scroll-snap-align: end;
+}
+.contact-page-text{
+    padding-top: 180px;
+    padding-right: 280px;
+}
+.contact-page-contents{
+    display: flex;
+}
+.Contact-page h2{
+    height: 108px;
+    width: 431px;
+    font-size: 80px;
+    margin-top: 50px;
+    margin-left: 100px;
+    margin-bottom: 40px;
+}
+
+.Contact-page p{
+    /* height: 88px;*/
+    width: 518px;
+    margin-left: 100px;
+}
+.avatar-contact-page{
+    padding-top: 219px;
+    width: 518px;
+    /*Flip Horizontal de mon avatar */
+    -webkit-transform: scaleX(-1);
+    transform: scaleX(1);
+    object-fit: contain;
+}
+
+.social-link-logos{
+    display:flex;
+    /* On peut utiliser "justify-content" pour gerer l'espace mais je vais utiliser les margin */
+    /* justify-content: space-around;*/
+    align-content: center;
+    height: 50px;
+    width: 50px;
+    /* mes margin pour espacer mes logos */
+    margin-left: 75px;
+    margin-top: 30px;
+}
+
+
+.social-link-logos a:hover{
+    transition: 0.15s ease-out;
+    /* effet zoom et rotation */
+    transform: scale(1.3) rotate(-2deg);
+}
+
+.social-network-logo{
+    height: 50px;
+    width: 50px;
+    /* mes margin pour espacer mes logos */
+    margin-right: 45px;
+    margin-left: 25px;
+}
+
+.Contact-page-avatar{
+    display: flex;
+    position: static;
+}
+
+#disclaimer{
+    margin-top: 250px;
+    font-weight: 200;
+    float: inline-start;
+}
+
+
+/* PAGE PROJETS*/
+
+.h1-projects-page{
+    padding-top: 300px;
+    margin: auto;
+    font-size: 5rem;
+    text-align: center;
+}
+
+
+
+
+/* RESPONSIVE !!!!! */
+
+/* HIDE / CACHER LA NAVBAR */
+@media screen  and (max-width: 900px){
+    /*.nav-bar{
+        padding: 0;
+        margin: 0;
+    }
+*/
+    .nav-bar .menu-burger{
+        /* afficher mon menu burger */
+        display: block;
+    }
+
+    .nav-links{
+        width: 100%;
+        margin-right: -400px;
+        background-color: rgba(25, 25, 26, 0.936);
+        backdrop-filter: blur(90px);
+        transition: all 0.6s ease;
+    }
+
+    .nav-links.mobile-menu{
+        margin-right: 0;
+    }
+    .nav-links ul{
+        display: flex;
+        flex-direction: column;
+        padding-top: 1500px;
+        padding-bottom: 900px;
+        padding-right: 190px;
+    }
+    .nav-links a{
+        color: white;
+        font-size: 1.6rem;
+    }
+    h1{
+        font-size: 3.5rem;
+        height: 200px;
+    }
+    /* cacher mon home avatar */
+    .home-avatar{
+        display: none;
+    }
+}
+
+
+@media screen and (min-width: 900px) {
+    .menu-burger{
+        /* DISPLAY NONE pour "effacer" notre menu burger en temps normal , car je souhaite l'afficher seulement sur format mobile */
+        display: none;
+    }
+}
+
+/* Present uniquement a partir de 900px de large */
+.menu-burger{
+    cursor: pointer;
+    position: absolute;
+    top: 26px;
+    right: 153px;
+    height: 49%;
+    width: 40px;
+}
+
+@media screen  and (max-width: 415px){
+    h1{
+        font-size: 2.7rem;
+        margin-top: 230px;
+        margin-left: 30px;
+    }
+    #cards-container img {
+        height: 270px;
+        width: 303px;
+        margin-bottom: 10px;
+        /* margin-right: 10px; */
+        object-fit: cover;
+        cursor: pointer;
+    }
+
+    #cards-container{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content:center;
+        align-items: center;
+        align-content: center;
+        padding-top: 165px;
+    }
+    .Work-page{
+        /* Hauteur de la section*/
+        height: 280vh;
+        padding-bottom: 400px;
+        margin-bottom: 95px;
+    }
+    
+    /* PAGE ABOUT ME */
+    #About-me-page{
+    height: 110vh;
+    padding-top: 175px;
+}
+    #About-me-page p {
+    height: 20px;
+    width: 324px;
+    margin-left: 30px;
+    margin-top: 20px;
+}
+    #About-me-page h2 {
+    height: 108px;
+    width: 431px;
+    font-size: 2.5rem;
+    margin-left: 30px;
+}
+    #about-me-main-p{
+    margin-bottom: 100px;
+    padding-bottom: 90px;
+    line-height: 1.6;
+}
+    .btn-contact{
+        margin-top: 100px;
+        margin-left: 98px;
+    }
+    .Contact-page  {
+        background-color: #292a2830;
+        height: 107vh;
+        width: 60vh;
+        scroll-snap-align: end;
+    }
+    .Contact-page h2 {
+        height: 108px;
+        width: 431px;
+        font-size: 2.5rem;
+        margin-top: 10px;
+        margin-left: 30px;
+    }
+    .Contact-page p {
+        height: 88px; 
+        width: 318px;
+        margin-left: 30px;
+    }
+    .social-link-logos {
+        display: flex;
+        flex-direction:column;
+        /* justify-content: space-around; */
+        align-content: center;
+        height: 50px;
+        width: 50px;
+        margin-left: 10px;
+        margin-top: 30px;
+        margin-bottom: 100px;
+        padding-bottom: 120px;
+    }
+    .social-link-logos img {
+        margin-top: 15px;
+        height: 63px;
+        width: 62px;
+        margin-left: 150px;
+        
+    }
+    .social-network-logo {
+        height: 50px;
+        width: 50px;
+        margin-right: 45px;
+        margin-left: 25px;
+    }
+    .About-me-page-content {
+        display:inline-block;
+        /* background-color: rgb(234, 153, 153); */
+    }
+    .avatar-contact-page {
+        display: none;
+    }
+    .moi-photo {
+        margin-bottom: 40px;
+        height: 217px;
+        width: 194px;
+        object-fit: contain;
+        margin-right: 5px;
+        box-shadow: rgb(0 0 0 / 88%) 5px 5px;
+    }
+}
